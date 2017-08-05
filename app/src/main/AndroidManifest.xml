@@ -5,6 +5,7 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -45,7 +46,10 @@
         <activity android:name=".activities.DefuncionActivity" />
         <activity android:name=".activities.DefuncionDetailActivity" />
         <activity android:name=".activities.CuentaCorrienteActivity" />
-        <activity android:name=".activities.CtaCteDetailActivity"></activity>
+        <activity android:name=".activities.CtaCteDetailActivity" />
+        <activity android:name=".activities.TramiteDocumentarioActivity" />
+        <activity android:name=".activities.TramiteDocumentarioDetailActivity" />
+        <activity android:name=".activities.PrediosArbitriosActivity"></activity>
     </application>
 
 </manifest>

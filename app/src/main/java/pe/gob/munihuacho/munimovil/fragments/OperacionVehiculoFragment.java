@@ -89,15 +89,16 @@ public class OperacionVehiculoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_operacion_vehiculo, container, false);
         btnBuscarOV=(Button)view.findViewById(R.id.btnBuscarOV);
+        final String[] placaopadron={""};
         inputPlacaPadronOV=(EditText)view.findViewById(R.id.inputPlacaPadronOV);
         btnBuscarOV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String param=inputPlacaPadronOV.getText().toString().trim();
+               placaopadron[0]=inputPlacaPadronOV.getText().toString().trim().toUpperCase();
                if(inputPlacaPadronOV.getText().toString().trim().isEmpty()){
                    Toast.makeText(getActivity(), "Ingrese un dato...", Toast.LENGTH_SHORT).show();
                }else{
-                   new SoapAction(getActivity()).execute(param);
+                   new SoapAction(getActivity()).execute(placaopadron[0]);
                }
             }
         });
@@ -145,7 +146,7 @@ public class OperacionVehiculoFragment extends Fragment {
                         notFoundMessage="No se encontro el registro";
                     }
                 }catch (Exception ex){
-
+notFoundMessage="No se encontro el registro";
                 }
             }else{
                 notEthernetConnection="No existe conexion a internet";

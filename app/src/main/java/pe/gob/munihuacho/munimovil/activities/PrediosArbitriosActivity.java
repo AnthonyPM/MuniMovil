@@ -10,39 +10,42 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import pe.gob.munihuacho.munimovil.R;
-import pe.gob.munihuacho.munimovil.adapters.NacimientoAdapter;
-import pe.gob.munihuacho.munimovil.model.Nacimiento;
+import pe.gob.munihuacho.munimovil.adapters.PredioArbitrioAdapter;
+import pe.gob.munihuacho.munimovil.model.Predio;
 
-public class NacimientoActivity extends AppCompatActivity {
-    ArrayList<Nacimiento> nacimientos;
-    RecyclerView rvNacimiento;
+public class PrediosArbitriosActivity extends AppCompatActivity {
+    String contrib;
+    ArrayList<Predio> predioArrayList;
+    TextView tvPAtitle;
+    RecyclerView rvPA;
+    String nombre;
+    TextView tvNombrePA;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nacimiento);
-        setTitle("Resultado de Nacimientos");
-        nacimientos=getIntent().getParcelableArrayListExtra("nacimiento");
-        rvNacimiento=(RecyclerView)findViewById(R.id.rvNacimiento);
-        rvNacimiento.setLayoutManager(new LinearLayoutManager(this));
-        if(nacimientos.size()==0){
+        setContentView(R.layout.activity_predios_arbitrios);
+        predioArrayList=getIntent().getParcelableArrayListExtra("predioarray");
+        setTitle("Predios y Arbitrios");
+        contrib=predioArrayList.get(0).getContrib();
+        nombre=predioArrayList.get(0).getNombre();
+        rvPA=(RecyclerView)findViewById(R.id.rvPA);
+        tvPAtitle=(TextView)findViewById(R.id.tvPAtitle);
+        tvNombrePA=(TextView)findViewById(R.id.tvNombrePA);
+        tvPAtitle.setText(contrib);
+        tvNombrePA.setText(nombre);
+        rvPA.setLayoutManager(new LinearLayoutManager(this));
+        if(predioArrayList.size()==0){
             return;
         }
-        NacimientoAdapter adapter=new NacimientoAdapter(this,nacimientos);
-        rvNacimiento.setAdapter(adapter);
-        adapter.setOnEntryClickListener(new NacimientoAdapter.OnEntryClickListener() {
-            @Override
-            public void onEntryClick(View view, int position) {
-                Intent intent=new Intent(NacimientoActivity.this,NacimientoDetailActivity.class);
-                intent.putExtra(NacimientoDetailActivity.DETALLE_NACIMIENTO,nacimientos.get(position));
-                startActivity(intent);
-            }
-        });
+        PredioArbitrioAdapter predioArbitrioAdapter=new PredioArbitrioAdapter(this,predioArrayList);
+        rvPA.setAdapter(predioArbitrioAdapter);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,7 +71,7 @@ public class NacimientoActivity extends AppCompatActivity {
     public void infoDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("INFORMACION");
-        builder.setMessage("El módulo de consulta de Acta de Registro Civil permite verificar si la Acta de nacimiento, de matrimonio o de defunción de una persona se encuentra registrada en la Municipalidad Provincial de Huaura.");
+        builder.setMessage("El módulo de consulta de Predios y Arbitrios permite mostrar la deuda que tiene contribuyente con la Municipalidad Provincial de Huaura.");
         builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

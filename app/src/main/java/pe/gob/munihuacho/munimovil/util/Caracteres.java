@@ -55,6 +55,22 @@ public class Caracteres {
         resultado=ceros+usuario;
         return resultado;
     }
+    public String cofigurarExpediente(String exp){
+        char[] arrayChar=exp.toCharArray();
+        String resultado="";
+        String ceros="";
+        if(arrayChar.length<=10){
+            int cantidadDeCeros=10-exp.length();
+            for(int i=0;i<cantidadDeCeros;i++){
+                ceros=ceros+"0";
+            }
+        }
+        resultado=ceros+exp;
+        return resultado;
+    }
+    public String configurarPlaca(String placa){
+        return placa.toUpperCase();
+    }
     public boolean validarFecha(String fecha){
         char[] arrayChar=fecha.toCharArray();
         for (int i=0;i<arrayChar.length;i++){

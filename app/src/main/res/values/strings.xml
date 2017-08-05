@@ -24,7 +24,7 @@
     <string name="usuario">Usuario</string>
     <string name="contra">Contraseña</string>
     <string name="textoBienvenido">
-       lghjjghgjgjgjgjgjg ghjgh
+       El proyecto Consultas en linea es una herramienta  para el ciudadano que permite conocer en linea sus deudas tributarias, si cuenta con papeletas de transito, entre otras importantes herramientas. El objetivo es brindar informacion  disponible para que desde la comodidad de sus hogares o de su trabaho puedan realizar las consultas. Bienenidos al inicio de un buen gobierno electronico municipal.
     </string>
     <string name="action_home">Inicio</string>
     <string name="action_back" />
@@ -70,7 +70,7 @@
     <string name="Concepto">Concepto</string>
     <string name="home">Inicio</string>
     <string name="ingrNombre">Ingrese Nombre...</string>
-    <string name="regyestcivil">Consulta de registro y estado civil</string>
+    <string name="regyestcivil">Actas de Registro Civil</string>
     <string name="apepaterno">Apellido Paterno</string>
     <string name="apematerno">Apellido Materno</string>
     <string name="nombres">Nombres</string>
@@ -91,8 +91,8 @@
     <string name="serie">Serie</string>
     <string name="fechaEmision">Fecha de Emisión</string>
     <string name="fechaCaducidad">Fecha de Caducidad</string>
-    <string name="operVehiculo">Consulta de operación vehicular</string>
-    <string name="papeletas">Consulta de papeletas</string>
+    <string name="operVehiculo">Tarjeta unica de circulación</string>
+    <string name="papeletas">Papeletas de transito</string>
     <string name="ingPapeletas">Ingrese el DNI o N° de papeleta</string>
     <string name="ingOperacionVehiculo">Ingrese operación vehiculo</string>
     <string name="ingresedato">Ingrese dato...</string>
@@ -132,4 +132,7 @@
     <string name="pagos">Pagos</string>
     <string name="pendiente">Pendiente</string>
     <string name="descripcion">Descripción</string>
+    <string name="alertahuacho">Alerta Huacho</string>
+    <string name="contactos">Contactanos</string>
+    <string name="action_info">Info</string>
 </resources>

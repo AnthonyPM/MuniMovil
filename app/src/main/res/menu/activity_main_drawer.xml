@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+        <group android:checkableBehavior="single"
+            android:id="@+id/menuprincipal">
         <item
             android:id="@+id/nav_papeletas"
             android:icon="@drawable/ic_papeleta"
@@ -8,7 +9,8 @@
         <item
             android:id="@+id/nav_consultarpago"
             android:icon="@drawable/ic_dinero"
-            android:title="@string/consultarPago" />
+            android:title="@string/consultarPago"
+            android:visible="false"/>
         <item
             android:id="@+id/nav_operacionvehiculo"
             android:icon="@drawable/ic_vehiculo"
@@ -25,5 +27,18 @@
             android:id="@+id/nav_tramites_documentarios"
             android:icon="@drawable/ic_tramites"
             android:title="@string/tramitesdocumentarios" />
+        </group>
 
+        <group android:id="@+id/menualertas"
+            android:checkableBehavior="none">
+                <item android:id="@+id/nav_alerta_opcion"
+                    android:title="@string/alertahuacho"
+                    android:icon="@drawable/ic_alerta_huacho"/>
+        </group>
+        <group android:id="@+id/contact"
+            android:checkableBehavior="single">
+                <item android:id="@+id/nav_contactanos"
+                    android:title="@string/contactos"
+                    android:icon="@drawable/ic_contactanos"/>
+        </group>
 </menu>
