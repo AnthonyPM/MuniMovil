@@ -58,15 +58,16 @@
             </ScrollView>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.3">
+                android:layout_weight="1.3"
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <ImageView
+                    android:id="@+id/sliderightimage"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/sliderightimage" />
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
         </LinearLayout>

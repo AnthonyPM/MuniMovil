@@ -70,7 +70,7 @@ public class AlertaHuachoFragment extends Fragment {
         serenazgo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_CALL,Uri.parse("tel:+51986064775"));
+                Intent intent=new Intent(Intent.ACTION_CALL,Uri.parse("tel:2325150"));
                 startActivity(intent);
             }
         });
@@ -79,7 +79,7 @@ public class AlertaHuachoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:+51986045774"));
+                intent.setData(Uri.parse("tel:2321192"));
                 startActivity(intent);
             }
         });
@@ -88,7 +88,7 @@ public class AlertaHuachoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:+51986045774"));
+                intent.setData(Uri.parse("tel:2323333"));
                 startActivity(intent);
             }
         });
