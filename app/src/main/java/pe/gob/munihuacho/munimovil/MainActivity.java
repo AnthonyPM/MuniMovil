@@ -27,7 +27,9 @@ import pe.gob.munihuacho.munimovil.fragments.ConsultarPapeletasFragment;
 import pe.gob.munihuacho.munimovil.fragments.ContactanosFragment;
 import pe.gob.munihuacho.munimovil.fragments.HomeFragment;
 import pe.gob.munihuacho.munimovil.fragments.OperacionVehiculoFragment;
+import pe.gob.munihuacho.munimovil.fragments.PrediosArbitriosFragment;
 import pe.gob.munihuacho.munimovil.fragments.RegistroEstadoCivilFragment;
+import pe.gob.munihuacho.munimovil.fragments.TramiteDocumentarioFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -124,11 +126,11 @@ ImageView navtitle;
             newFragment= ConsultarPapeletasFragment.newInstance(String.valueOf(id),item.getTitle().toString());
             setTitle(item.getTitle());
         }else if(id==R.id.nav_predios_arbitrios){
-            Intent intent=new Intent(this, LoginActivity.class);
-            startActivity(intent);
+            newFragment = PrediosArbitriosFragment.newInstance(String.valueOf(id),item.getTitle().toString());
+            setTitle(item.getTitle());
         }else if(id==R.id.nav_tramites_documentarios){
-            Intent intent=new Intent(this, SisgedoActivity.class);
-            startActivity(intent);
+            newFragment = TramiteDocumentarioFragment.newInstance(String.valueOf(id),item.getTitle().toString());
+            setTitle(item.getTitle());
         }else if(id==R.id.nav_alerta_opcion){
             newFragment= AlertaHuachoFragment.newInstance(String.valueOf(id),item.getTitle().toString());
             setTitle(item.getTitle());

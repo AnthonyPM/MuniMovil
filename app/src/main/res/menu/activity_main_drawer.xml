@@ -28,6 +28,7 @@
             android:icon="@drawable/ic_tramites"
             android:title="@string/tramitesdocumentarios" />
         </group>
+
         <group android:id="@+id/menualertas"
             android:checkableBehavior="none">
                 <item android:id="@+id/nav_alerta_opcion"

@@ -134,4 +134,5 @@
     <string name="descripcion">Descripción</string>
     <string name="alertahuacho">Alerta Huacho</string>
     <string name="contactos">Contactanos</string>
+    <string name="action_info">Info</string>
 </resources>
